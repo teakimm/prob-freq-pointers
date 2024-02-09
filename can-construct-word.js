@@ -9,7 +9,10 @@ look at the keys of the word and see if the letters as at least that many
 occourances*/
 
 
-/** Checks to see if a word can be made with the given letters */
+/** Checks to see if a word can be made with the given letters
+ * if a the word can be made with the letters, return true. Otherwise, return
+ * false.
+ */
 function canConstructWord(word, letters) {
   if(letters.length === 0) {
     return false;
