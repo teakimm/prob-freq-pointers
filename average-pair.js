@@ -12,7 +12,7 @@
 
 
 /** Sees if there are two values in nums whose average is equal to targetAvg.
- * returns true if there is, otherwise return false;
+ * returns true if there is. Otherwise, return false;
 */
 function averagePair(nums, targetAvg) {
   let left = 0;

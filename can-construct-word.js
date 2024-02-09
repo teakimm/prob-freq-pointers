@@ -9,8 +9,8 @@ look at the keys of the word and see if the letters as at least that many
 occourances*/
 
 
-/** Checks to see if a word can be made with the given letters
- * if a the word can be made with the letters, return true. Otherwise, return
+/** Checks to see if a given word can be made with the given letters.
+ * If the word can be made with the letters, return true. Otherwise, return
  * false.
  */
 function canConstructWord(word, letters) {
@@ -18,8 +18,8 @@ function canConstructWord(word, letters) {
     return false;
   }
 
-  let wordFreq = frequencyCounter(word);
-  let letterFreq = frequencyCounter(letters);
+  const wordFreq = countFrequencies(word);
+  const letterFreq = countFrequencies(letters);
 
   for (const key in wordFreq) {
     if(!(key in letterFreq)) {
@@ -33,8 +33,8 @@ function canConstructWord(word, letters) {
 }
 
 /** creates an object with character freqencies in a given string */
-function frequencyCounter(str) {
-  let freq = {};
+function countFrequencies(str) {
+  const freq = {};
   for (const char of str) {
     freq[char] = (freq[char] || 0) + 1;
   }
